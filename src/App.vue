@@ -6,6 +6,7 @@ import AboutSection from '@/components/sections/AboutSection.vue'
 import ServicesSection from '@/components/sections/ServicesSection.vue'
 import TeamSection from '@/components/sections/TeamSection.vue'
 import ContactSection from '@/components/sections/ContactSection.vue'
+import BackToTopButton from '@/components/ui/BackToTopButton.vue'
 </script>
 
 <template>
@@ -19,5 +20,6 @@ import ContactSection from '@/components/sections/ContactSection.vue'
       <ContactSection />
     </main>
     <Footer />
+    <BackToTopButton />
   </div>
 </template>
