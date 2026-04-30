@@ -12,7 +12,6 @@ const navigation: NavItem[] = [
   { name: 'O nama', href: '#about' },
   { name: 'Tim', href: '#team' },
   { name: 'Usluge', href: '#services' },
-  { name: 'Kontakt', href: '#contact' },
 ]
 
 const isOpen = ref(false)

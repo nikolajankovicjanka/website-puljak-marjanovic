@@ -12,39 +12,67 @@ type Service = {
 const services: Service[] = [
   {
     icon: Scale,
-    title: 'Građansko pravo',
+    title: 'GRAĐANSKO PRAVO',
     description:
-        'Kompletna pravna zaštita u oblasti građanskog prava, uključujući ugovore, naknadu štete i imovinsko-pravne odnose.',
+        'zastupanje u parničnim postupcima, izvršnim postupcima i\n' +
+        'vanparničnim postupcima pred nadležnim sudovima u Republici Srpskoj\n' +
+        'i Federaciji Bosne i Hercegovine, a u postupcima iz svih oblasti\n' +
+        'građanskog, odnosno civilnog prava;',
   },
   {
     icon: Briefcase,
-    title: 'Privredno pravo',
+    title: 'PORODIČNO I NASLJEDNO PRAVO',
     description:
-        'Savjetovanje i zastupanje u privrednim sporovima, osnivanje društava i pravna podrška poslovanju.',
+        'zastupanje u postupcima razvoda braka, regulisanja imovinskih odnosa\n' +
+        'supružnika, uređenja ličnih odnosa roditelja i djece, zakonskog\n' +
+        'izdržavanja, kao i ostvarivanja roditeljskog prava, a pred nadležnim\n' +
+        'sudovima, organom starateljstva i jedinici lokalne samouprave;\n' +
+        '- zastupanje u ostavinskim postupcima, pred nadlženim sudom ili\n' +
+        'postupajućim notarom, sačinjavanje testamenata i druge savjetodavne\n' +
+        'usluge.',
   },
   {
     icon: FileText,
-    title: 'Ugovorno pravo',
+    title: 'RADNO PRAVO',
     description:
-        'Izrada, provjera i pravni savjeti za sve vrste ugovora sa fokusom na zaštitu vaših interesa.',
+        'pružanje usluga zastupanja u radno-pravnim sporovima, izrada\n' +
+        'dokumentacije i pravno savjetovanje u oblasti radno-pravnih odnosa.',
   },
   {
     icon: Home,
-    title: 'Imovinsko pravo',
+    title: 'IMOVINSKA PRAVA',
     description:
-        'Rješavanje pitanja svojinskih prava, kupoprodaje, naslijeđa i drugih imovinsko-pravnih odnosa.',
+        'zastupanje u svim imovinsko-pravnim sporovima pred nadležnim\n' +
+        'sudovima u Republici Srpskoj i Federaciji Bosne i Hercegovine,\n' +
+        'zastupanje prilikom prometa nekretnina, registracije nekretnina kod\n' +
+        'poreskih organa, zastupanja prilikom uknjižbe i brisanja prava u\n' +
+        'zemljišnim knjigama, zastupanje u postupcima eksproprijacije zemljišta\n' +
+        'i drugim postupcima pred organima uprave;',
   },
   {
     icon: Landmark,
-    title: 'Sudsko zastupanje',
+    title: 'UPRAVNO PRAVO',
     description:
-        'Profesionalno zastupanje pred svim sudskim instancama sa dugogodišnjim iskustvom u sporovima.',
+        'pokretanje i vođenje svih upravnih postupaka pred nadležnim organima\n' +
+        'uprave u Republici Srpskoj i Federaciji Bosne i Hercegovine, posebno\n' +
+        'uključujući postupke koji se odnose na legalizacije i odobrenja za\n' +
+        'građenje, inspekcijske i poreske poslove, pribavljanje dozvola,\n' +
+        'regulisanje statusnih pitanja, posebno državljanstva Bosne i\n' +
+        'Hercegovine, postupke javnih nabavki i druge upravne postupke,\n' +
+        'pokretanje upravnih sporova',
   },
   {
     icon: Users,
-    title: 'Porodično pravo',
+    title: 'DRUGE OBLASTI RADA',
     description:
-        'Diskretno i profesionalno rješavanje porodično-pravnih pitanja, razvoda, starateljstva i naslijeđa.',
+        'zastupanje u krivičnim i prekršajnim postupcima pred nadležnim\n' +
+        'sudovima u Republici Srpskoj i Federaciji Bosne i Hercegovine;\n' +
+        '\n' +
+        '- zastupanje u privrednim sporovima pred nadležnim sudovima u\n' +
+        'Republici Srpskoj i Federaciji Bosne i Hercegovine;\n' +
+        '- pružanje usluga registracije privrednih društava, kao i udruženja građana\n' +
+        'i fondacija;\n' +
+        '- izrada svih vrsta ugovora i pružanje savjetodavnih usluga.',
   },
 ]
 
