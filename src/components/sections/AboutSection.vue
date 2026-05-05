@@ -1,34 +1,37 @@
 <script setup lang="ts">
 import { Award, Users, Shield, Clock } from 'lucide-vue-next'
 import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import type { Component } from 'vue'
 
 type Feature = {
   icon: Component
-  title: string
-  description: string
+  titleKey: string
+  descriptionKey: string
 }
+
+const { t } = useI18n()
 
 const features: Feature[] = [
   {
     icon: Award,
-    title: 'Dugogodišnje iskustvo',
-    description: 'Preko 20 godina pravne prakse i uspješno riješenih slučajeva',
+    titleKey: 'about.features.experience.title',
+    descriptionKey: 'about.features.experience.description',
   },
   {
     icon: Users,
-    title: 'Posvećenost klijentima',
-    description: 'Individualni pristup svakom klijentu i njihovim potrebama',
+    titleKey: 'about.features.clients.title',
+    descriptionKey: 'about.features.clients.description',
   },
   {
     icon: Shield,
-    title: 'Pouzdanost',
-    description: 'Integritet i profesionalnost u svakom aspektu našeg rada',
+    titleKey: 'about.features.reliability.title',
+    descriptionKey: 'about.features.reliability.description',
   },
   {
     icon: Clock,
-    title: 'Dostupnost',
-    description: 'Uvijek dostupni našim klijentima za konsultacije i podršku',
+    titleKey: 'about.features.availability.title',
+    descriptionKey: 'about.features.availability.description',
   },
 ]
 
@@ -74,17 +77,23 @@ onBeforeUnmount(() => {
           <div class="about-image-wrap relative h-[600px] overflow-hidden rounded-2xl shadow-2xl">
             <img
                 src="/about-img.jpg"
-                alt="Law office"
+                :alt="t('about.imageAlt')"
                 class="about-image h-full w-full object-cover"
             />
+
             <div class="absolute inset-0 bg-gradient-to-t from-[#556B2F]/30 to-transparent" />
           </div>
 
           <div
               class="about-badge absolute -bottom-8 -right-8 max-w-xs rounded-lg bg-[#556B2F] p-8 text-white shadow-xl"
           >
-            <div class="mb-2 text-5xl font-bold">20+</div>
-            <div class="text-lg font-light">Godina iskustva</div>
+            <div class="mb-2 text-5xl font-bold">
+              {{ t('about.badge.number') }}
+            </div>
+
+            <div class="text-lg font-light">
+              {{ t('about.badge.text') }}
+            </div>
           </div>
         </div>
 
@@ -94,39 +103,34 @@ onBeforeUnmount(() => {
               class="reveal-item mb-6 inline-block rounded-full bg-[#556B2F]/10 px-4 py-2 text-[#556B2F]"
               style="transition-delay: 120ms"
           >
-            O nama
+            {{ t('about.label') }}
           </div>
 
           <h2
               class="reveal-item mb-6 font-serif text-4xl leading-tight text-gray-900 md:text-5xl"
               style="transition-delay: 220ms"
           >
-            Vaš pouzdani pravni partner u Bijeljini
+            {{ t('about.title') }}
           </h2>
 
           <p
               class="reveal-item mb-6 text-lg leading-relaxed text-gray-700"
               style="transition-delay: 320ms"
           >
-            Advokatska kancelarija Puljak &amp; Marjanovic je renomirana pravna firma sa
-            sjedištem u Bijeljini, specijalizovana za širok spektar pravnih usluga. Sa
-            našim timom iskusnih pravnika, posvećeni smo pružanju pravne pomoći najvišeg
-            kvaliteta.
+            {{ t('about.descriptionOne') }}
           </p>
 
           <p
               class="reveal-item mb-8 text-lg leading-relaxed text-gray-700"
               style="transition-delay: 420ms"
           >
-            Naš pristup zasniva se na individualnom razumijevanju potreba svakog klijenta,
-            profesionalnosti i etičkim standardima. Gradimo dugoročne odnose zasnovane na
-            povjerenju, transparentnosti i izvrsnosti.
+            {{ t('about.descriptionTwo') }}
           </p>
 
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div
                 v-for="(feature, index) in features"
-                :key="feature.title"
+                :key="feature.titleKey"
                 class="feature-item flex items-start gap-4"
                 :style="{ transitionDelay: `${520 + index * 120}ms` }"
             >
@@ -138,10 +142,11 @@ onBeforeUnmount(() => {
 
               <div>
                 <h3 class="mb-1 text-lg font-semibold text-gray-900">
-                  {{ feature.title }}
+                  {{ t(feature.titleKey) }}
                 </h3>
+
                 <p class="text-sm leading-relaxed text-gray-600">
-                  {{ feature.description }}
+                  {{ t(feature.descriptionKey) }}
                 </p>
               </div>
             </div>

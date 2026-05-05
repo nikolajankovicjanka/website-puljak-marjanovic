@@ -1,34 +1,37 @@
 <script setup lang="ts">
 import { MapPin, Phone, Mail, Clock } from 'lucide-vue-next'
 import { reactive, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import type { Component } from 'vue'
 
 type ContactInfoItem = {
   icon: Component
-  title: string
-  details: string[]
+  titleKey: string
+  detailKeys: string[]
 }
+
+const { t } = useI18n()
 
 const contactInfo: ContactInfoItem[] = [
   {
     icon: MapPin,
-    title: 'Adresa',
-    details: ['Atinska 19', 'Bijeljina, 76300'],
+    titleKey: 'contact.info.address.title',
+    detailKeys: ['contact.info.address.lineOne', 'contact.info.address.lineTwo'],
   },
   {
     icon: Phone,
-    title: 'Telefon',
-    details: ['+387 XX XXX XXX', '+387 XX XXX XXX'],
+    titleKey: 'contact.info.phone.title',
+    detailKeys: ['contact.info.phone.lineOne', 'contact.info.phone.lineTwo'],
   },
   {
     icon: Mail,
-    title: 'Email',
-    details: ['info@puljak-marjanovic.ba', 'kontakt@puljak-marjanovic.ba'],
+    titleKey: 'contact.info.email.title',
+    detailKeys: ['contact.info.email.lineOne', 'contact.info.email.lineTwo'],
   },
   {
     icon: Clock,
-    title: 'Radno vrijeme',
-    details: ['Pon - Pet: 08:00 - 16:00', 'Subota: Po dogovoru'],
+    titleKey: 'contact.info.workingHours.title',
+    detailKeys: ['contact.info.workingHours.lineOne', 'contact.info.workingHours.lineTwo'],
   },
 ]
 
@@ -56,12 +59,12 @@ const submitForm = async () => {
   submitError.value = ''
 
   if (!accessKey) {
-    submitError.value = 'Nedostaje Web3Forms access key u .env fajlu.'
+    submitError.value = t('contact.form.errors.missingAccessKey')
     return
   }
 
   if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
-    submitError.value = 'Popunite sva obavezna polja.'
+    submitError.value = t('contact.form.errors.requiredFields')
     return
   }
 
@@ -76,8 +79,8 @@ const submitForm = async () => {
       },
       body: JSON.stringify({
         access_key: accessKey,
-        subject: 'Nova poruka sa sajta Puljak & Marjanovic',
-        from_name: 'Puljak & Marjanovic Website',
+        subject: t('contact.form.emailSubject'),
+        from_name: 'Puljak & Marjanović Website',
         name: form.name,
         email: form.email,
         message: form.message,
@@ -93,9 +96,9 @@ const submitForm = async () => {
       return
     }
 
-    submitError.value = result.message || 'Došlo je do greške pri slanju poruke.'
+    submitError.value = result.message || t('contact.form.errors.submitFailed')
   } catch {
-    submitError.value = 'Greška mreže. Pokušajte ponovo.'
+    submitError.value = t('contact.form.errors.network')
   } finally {
     isSubmitting.value = false
   }
@@ -112,23 +115,22 @@ const submitForm = async () => {
     <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mb-16 text-center">
         <div class="mb-6 inline-block rounded-full bg-[#556B2F]/10 px-4 py-2 text-[#556B2F]">
-          Kontakt
+          {{ t('contact.label') }}
         </div>
 
         <h2 class="mb-6 font-serif text-4xl text-[#2F3A1F] md:text-5xl">
-          Stupite u kontakt s nama
+          {{ t('contact.title') }}
         </h2>
 
         <p class="mx-auto max-w-3xl text-lg leading-relaxed text-[#5B624D]">
-          Ako vam je potrebna pravna pomoć ili savjet, slobodno nas kontaktirajte.
-          Tu smo da odgovorimo na sva vaša pitanja.
+          {{ t('contact.description') }}
         </p>
       </div>
 
       <div class="mb-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
         <article
             v-for="info in contactInfo"
-            :key="info.title"
+            :key="info.titleKey"
             class="rounded-2xl border border-[#556B2F]/10 bg-[#F5F5DC] p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
         >
           <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#556B2F]">
@@ -136,15 +138,15 @@ const submitForm = async () => {
           </div>
 
           <h3 class="mb-3 text-lg font-semibold text-[#2F3A1F]">
-            {{ info.title }}
+            {{ t(info.titleKey) }}
           </h3>
 
           <p
-              v-for="detail in info.details"
-              :key="detail"
+              v-for="detailKey in info.detailKeys"
+              :key="detailKey"
               class="mb-1 text-sm leading-relaxed text-[#5B624D]"
           >
-            {{ detail }}
+            {{ t(detailKey) }}
           </p>
         </article>
       </div>
@@ -152,32 +154,43 @@ const submitForm = async () => {
       <div class="mb-16 grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.95fr_1.05fr]">
         <div class="max-w-xl pt-2">
           <p class="text-sm font-medium uppercase tracking-[0.25em] text-[#556B2F]/80">
-            Pravna konsultacija
+            {{ t('contact.consultation.kicker') }}
           </p>
 
           <h3 class="mt-4 font-serif text-4xl leading-tight text-[#2F3A1F]">
-            Zatražite pravnu konsultaciju.
+            {{ t('contact.consultation.title') }}
           </h3>
 
           <p class="mt-6 text-lg leading-relaxed text-[#5B624D]">
-            Javite nam se za inicijalne informacije, pravni savjet ili dogovor oko konsultacija.
-            Odgovaramo profesionalno, diskretno i u najkraćem mogućem roku.
+            {{ t('contact.consultation.description') }}
           </p>
 
           <div class="mt-10 space-y-5 text-lg text-[#3D4332]">
             <div>
-              <div class="text-sm uppercase tracking-[0.2em] text-[#556B2F]/70">Adresa</div>
-              <p class="mt-1">Atinska 19, Bijeljina 76300</p>
+              <div class="text-sm uppercase tracking-[0.2em] text-[#556B2F]/70">
+                {{ t('contact.side.addressLabel') }}
+              </div>
+              <p class="mt-1">
+                {{ t('contact.side.address') }}
+              </p>
             </div>
 
             <div>
-              <div class="text-sm uppercase tracking-[0.2em] text-[#556B2F]/70">Email</div>
-              <p class="mt-1">info@puljak-marjanovic.ba</p>
+              <div class="text-sm uppercase tracking-[0.2em] text-[#556B2F]/70">
+                {{ t('contact.side.emailLabel') }}
+              </div>
+              <p class="mt-1">
+                {{ t('contact.side.email') }}
+              </p>
             </div>
 
             <div>
-              <div class="text-sm uppercase tracking-[0.2em] text-[#556B2F]/70">Telefon</div>
-              <p class="mt-1">+387 XX XXX XXX</p>
+              <div class="text-sm uppercase tracking-[0.2em] text-[#556B2F]/70">
+                {{ t('contact.side.phoneLabel') }}
+              </div>
+              <p class="mt-1">
+                {{ t('contact.side.phone') }}
+              </p>
             </div>
           </div>
         </div>
@@ -190,7 +203,7 @@ const submitForm = async () => {
                 type="text"
                 required
                 class="h-14 rounded-2xl border border-white/20 bg-white/10 px-5 text-white outline-none transition-all duration-300 placeholder:text-white/70 focus:border-white/35 focus:bg-white/15"
-                placeholder="Ime i prezime"
+                :placeholder="t('contact.form.namePlaceholder')"
             />
 
             <input
@@ -199,7 +212,7 @@ const submitForm = async () => {
                 type="email"
                 required
                 class="h-14 rounded-2xl border border-white/20 bg-white/10 px-5 text-white outline-none transition-all duration-300 placeholder:text-white/70 focus:border-white/35 focus:bg-white/15"
-                placeholder="Email"
+                :placeholder="t('contact.form.emailPlaceholder')"
             />
 
             <textarea
@@ -207,7 +220,7 @@ const submitForm = async () => {
                 name="message"
                 required
                 class="min-h-40 rounded-2xl border border-white/20 bg-white/10 px-5 py-4 text-white outline-none transition-all duration-300 placeholder:text-white/70 focus:border-white/35 focus:bg-white/15"
-                placeholder="Vaša poruka"
+                :placeholder="t('contact.form.messagePlaceholder')"
             />
 
             <!-- Honeypot -->
@@ -225,11 +238,11 @@ const submitForm = async () => {
                 :disabled="isSubmitting"
                 class="mt-2 rounded-2xl bg-white px-6 py-4 font-medium text-[#556B2F] shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#F5F5DC] disabled:cursor-not-allowed disabled:opacity-70"
             >
-              {{ isSubmitting ? 'Slanje...' : 'Pošalji upit' }}
+              {{ isSubmitting ? t('contact.form.submitting') : t('contact.form.submit') }}
             </button>
 
             <p v-if="submitSuccess" class="text-sm text-[#F5F5DC]">
-              Poruka je uspješno poslana.
+              {{ t('contact.form.success') }}
             </p>
 
             <p v-if="submitError" class="text-sm text-red-100">
@@ -244,15 +257,15 @@ const submitForm = async () => {
           <div
               class="inline-block rounded-full bg-[#556B2F]/10 px-4 py-2 text-sm font-medium text-[#556B2F]"
           >
-            Naša lokacija
+            {{ t('contact.map.label') }}
           </div>
 
           <h3 class="mt-4 font-serif text-3xl text-[#2F3A1F]">
-            Posjetite nas u kancelariji
+            {{ t('contact.map.title') }}
           </h3>
 
           <p class="mt-3 text-[#5B624D]">
-            Atinska 19, Bijeljina 76300
+            {{ t('contact.map.address') }}
           </p>
         </div>
 
@@ -267,7 +280,7 @@ const submitForm = async () => {
                 style="border: 0"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-                title="Lokacija kancelarije Puljak & Marjanovic"
+                :title="t('contact.map.iframeTitle')"
                 class="block h-[480px] w-full"
                 allowfullscreen
             />

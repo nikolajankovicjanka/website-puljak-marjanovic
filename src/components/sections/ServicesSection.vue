@@ -1,83 +1,53 @@
 <script setup lang="ts">
 import { Scale, Briefcase, FileText, Home, Landmark, Users } from 'lucide-vue-next'
 import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import type { Component } from 'vue'
 
 type Service = {
   icon: Component
-  title: string
-  description: string
+  titleKey: string
+  descriptionKey: string
 }
+
+const { t } = useI18n()
 
 const services: Service[] = [
   {
     icon: Scale,
-    title: 'GRAĐANSKO PRAVO',
-    description:
-        'zastupanje u parničnim postupcima, izvršnim postupcima i\n' +
-        'vanparničnim postupcima pred nadležnim sudovima u Republici Srpskoj\n' +
-        'i Federaciji Bosne i Hercegovine, a u postupcima iz svih oblasti\n' +
-        'građanskog, odnosno civilnog prava;',
+    titleKey: 'services.items.civil.title',
+    descriptionKey: 'services.items.civil.description',
   },
   {
     icon: Briefcase,
-    title: 'PORODIČNO I NASLJEDNO PRAVO',
-    description:
-        'zastupanje u postupcima razvoda braka, regulisanja imovinskih odnosa\n' +
-        'supružnika, uređenja ličnih odnosa roditelja i djece, zakonskog\n' +
-        'izdržavanja, kao i ostvarivanja roditeljskog prava, a pred nadležnim\n' +
-        'sudovima, organom starateljstva i jedinici lokalne samouprave;\n' +
-        '- zastupanje u ostavinskim postupcima, pred nadlženim sudom ili\n' +
-        'postupajućim notarom, sačinjavanje testamenata i druge savjetodavne\n' +
-        'usluge.',
+    titleKey: 'services.items.familyInheritance.title',
+    descriptionKey: 'services.items.familyInheritance.description',
   },
   {
     icon: FileText,
-    title: 'RADNO PRAVO',
-    description:
-        'pružanje usluga zastupanja u radno-pravnim sporovima, izrada\n' +
-        'dokumentacije i pravno savjetovanje u oblasti radno-pravnih odnosa.',
+    titleKey: 'services.items.labor.title',
+    descriptionKey: 'services.items.labor.description',
   },
   {
     icon: Home,
-    title: 'IMOVINSKA PRAVA',
-    description:
-        'zastupanje u svim imovinsko-pravnim sporovima pred nadležnim\n' +
-        'sudovima u Republici Srpskoj i Federaciji Bosne i Hercegovine,\n' +
-        'zastupanje prilikom prometa nekretnina, registracije nekretnina kod\n' +
-        'poreskih organa, zastupanja prilikom uknjižbe i brisanja prava u\n' +
-        'zemljišnim knjigama, zastupanje u postupcima eksproprijacije zemljišta\n' +
-        'i drugim postupcima pred organima uprave;',
+    titleKey: 'services.items.property.title',
+    descriptionKey: 'services.items.property.description',
   },
   {
     icon: Landmark,
-    title: 'UPRAVNO PRAVO',
-    description:
-        'pokretanje i vođenje svih upravnih postupaka pred nadležnim organima\n' +
-        'uprave u Republici Srpskoj i Federaciji Bosne i Hercegovine, posebno\n' +
-        'uključujući postupke koji se odnose na legalizacije i odobrenja za\n' +
-        'građenje, inspekcijske i poreske poslove, pribavljanje dozvola,\n' +
-        'regulisanje statusnih pitanja, posebno državljanstva Bosne i\n' +
-        'Hercegovine, postupke javnih nabavki i druge upravne postupke,\n' +
-        'pokretanje upravnih sporova',
+    titleKey: 'services.items.administrative.title',
+    descriptionKey: 'services.items.administrative.description',
   },
   {
     icon: Users,
-    title: 'DRUGE OBLASTI RADA',
-    description:
-        'zastupanje u krivičnim i prekršajnim postupcima pred nadležnim\n' +
-        'sudovima u Republici Srpskoj i Federaciji Bosne i Hercegovine;\n' +
-        '\n' +
-        '- zastupanje u privrednim sporovima pred nadležnim sudovima u\n' +
-        'Republici Srpskoj i Federaciji Bosne i Hercegovine;\n' +
-        '- pružanje usluga registracije privrednih društava, kao i udruženja građana\n' +
-        'i fondacija;\n' +
-        '- izrada svih vrsta ugovora i pružanje savjetodavnih usluga.',
+    titleKey: 'services.items.other.title',
+    descriptionKey: 'services.items.other.description',
   },
 ]
 
 const scrollToSection = (href: string) => {
   const element = document.querySelector(href)
+
   if (element) {
     element.scrollIntoView({ behavior: 'smooth' })
   }
@@ -125,22 +95,21 @@ onBeforeUnmount(() => {
             class="services-reveal mb-6 inline-block rounded-full bg-[#556B2F]/10 px-4 py-2 text-[#556B2F]"
             style="transition-delay: 100ms"
         >
-          Naše usluge
+          {{ t('services.label') }}
         </div>
 
         <h2
             class="services-reveal mb-6 font-serif text-4xl text-gray-900 md:text-5xl"
             style="transition-delay: 200ms"
         >
-          Pravne usluge visokog kvaliteta
+          {{ t('services.title') }}
         </h2>
 
         <p
             class="services-reveal mx-auto max-w-3xl text-lg leading-relaxed text-gray-600"
             style="transition-delay: 320ms"
         >
-          Nudimo sveobuhvatne pravne usluge prilagođene potrebama naših klijenata,
-          sa stručnošću i posvećenošću u svakom segmentu rada.
+          {{ t('services.description') }}
         </p>
       </div>
 
@@ -148,28 +117,28 @@ onBeforeUnmount(() => {
       <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         <article
             v-for="(service, index) in services"
-            :key="service.title"
-            class="service-card group relative rounded-2xl border border-transparent bg-[#F5F5DC] p-8 transition-all duration-300 hover:border-[#556B2F]/20 hover:-translate-y-1 hover:shadow-2xl"
-            :style="{ transitionDelay: `${420 + index * 110}ms` }"
+            :key="service.titleKey"
+            class="service-card group relative rounded-2xl bg-[#F5F5DC] p-8 shadow-none transition-all duration-800 ease-out hover:-translate-y-0.5 hover:shadow-sm"
+            :style="{ transitionDelay: `${800 + index * 110}ms` }"
         >
           <div class="relative mb-6">
             <div
-                class="service-icon flex h-16 w-16 items-center justify-center rounded-xl bg-[#556B2F] shadow-lg transition-transform duration-300 group-hover:scale-110"
+                class="service-icon flex h-16 w-16 items-center justify-center rounded-xl bg-[#556B2F] shadow-sm transition-all duration-700 ease-out group-hover:scale-105"
             >
               <component :is="service.icon" class="h-8 w-8 text-white" />
             </div>
           </div>
 
           <h3 class="mb-4 text-2xl font-semibold text-gray-900">
-            {{ service.title }}
+            {{ t(service.titleKey) }}
           </h3>
 
-          <p class="leading-relaxed text-gray-600">
-            {{ service.description }}
+          <p class="whitespace-pre-line leading-relaxed text-gray-600">
+            {{ t(service.descriptionKey) }}
           </p>
 
           <div
-              class="pointer-events-none absolute right-0 top-0 -z-10 h-32 w-32 rounded-full bg-[#556B2F]/5 opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-100"
+              class="pointer-events-none absolute right-0 top-0 -z-10 h-32 w-32 rounded-full bg-[#556B2F]/5 opacity-0 blur-3xl transition-opacity duration-700 ease-out group-hover:opacity-100"
           />
         </article>
       </div>
@@ -181,18 +150,19 @@ onBeforeUnmount(() => {
             style="transition-delay: 1120ms"
         >
           <h3 class="mb-4 font-serif text-3xl text-white">
-            Potrebna vam je pravna pomoć?
+            {{ t('services.cta.title') }}
           </h3>
 
           <p class="mx-auto mb-8 max-w-2xl text-lg text-white/90">
-            Kontaktirajte nas za besplatnu inicijalnu konsultaciju i saznajte kako možemo pomoći.
+            {{ t('services.cta.description') }}
           </p>
 
           <button
-              class="rounded-lg bg-white px-8 py-4 text-[#556B2F] shadow-lg transition-colors duration-300 hover:bg-[#F5F5DC]"
+              type="button"
+              class="rounded-lg bg-white px-8 py-4 text-[#556B2F] shadow-sm transition-colors duration-500 ease-out hover:bg-[#F5F5DC]"
               @click="scrollToSection('#contact')"
           >
-            Zakažite konsultaciju
+            {{ t('services.cta.button') }}
           </button>
         </div>
       </div>
@@ -208,15 +178,16 @@ onBeforeUnmount(() => {
   transform: translateY(28px);
   transition:
       opacity 0.75s ease,
-      transform 0.75s ease;
+      transform 0.75s ease,
+      box-shadow 0.7s ease;
   will-change: opacity, transform;
 }
 
 .service-card .service-icon {
-  transform: scale(0.9);
+  transform: scale(0.94);
   transition:
       transform 0.7s ease,
-      box-shadow 0.3s ease;
+      box-shadow 0.7s ease;
 }
 
 .services-visible .services-reveal,
