@@ -123,8 +123,8 @@ export default {
             },
             email: {
                 title: 'E-Mail',
-                lineOne: 'info@puljak-marjanovic.ba',
-                lineTwo: 'kontakt@puljak-marjanovic.ba',
+                lineOne: 'advokatnovkamarjanovic{\'@\'}gmail.com',
+                lineTwo: 'adv.aleksandralugonja{\'@\'}gmail.com',
             },
             workingHours: {
                 title: 'Öffnungszeiten',
@@ -144,7 +144,7 @@ export default {
             addressLabel: 'Adresse',
             address: 'Atinska 19, Bijeljina 76300',
             emailLabel: 'E-Mail',
-            email: 'info@puljak-marjanovic.ba',
+            email: 'advokatnovkamarjanovic{\'@\'}gmail.com',
             phoneLabel: 'Telefon',
             phone: '+387 XX XXX XXX',
         },
@@ -261,8 +261,8 @@ export default {
         contact: {
             phoneOne: '+387 XX XXX XXX',
             phoneTwo: '+387 XX XXX XXX',
-            emailOne: 'info@puljak-marjanovic.ba',
-            emailTwo: 'kontakt@puljak-marjanovic.ba',
+            emailOne: 'advokatnovkamarjanovic{\'@\'}gmail.com',
+            emailTwo: 'adv.aleksandralugonja{\'@\'}gmail.com',
         },
 
         rights: 'Alle Rechte vorbehalten.',
