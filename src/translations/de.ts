@@ -28,7 +28,7 @@ export default {
             'Unser Ansatz basiert auf dem individuellen Verständnis der Bedürfnisse jedes Mandanten, Professionalität und hohen ethischen Standards. Wir bauen langfristige Beziehungen auf, die auf Vertrauen, Transparenz und Qualität beruhen.',
 
         badge: {
-            number: '20+',
+            number: '15+',
             text: 'Jahre Erfahrung',
         },
 

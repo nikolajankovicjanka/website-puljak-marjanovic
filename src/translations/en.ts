@@ -28,7 +28,7 @@ export default {
             'Our approach is based on understanding the individual needs of each client, professionalism and strong ethical standards. We build long-term relationships founded on trust, transparency and excellence.',
 
         badge: {
-            number: '20+',
+            number: '15+',
             text: 'Years of experience',
         },
 

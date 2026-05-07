@@ -28,7 +28,7 @@ export default {
             'Naš pristup zasniva se na individualnom razumijevanju potreba svakog klijenta, profesionalnosti i etičkim standardima. Gradimo dugoročne odnose zasnovane na povjerenju, transparentnosti i izvrsnosti.',
 
         badge: {
-            number: '20+',
+            number: '15+',
             text: 'Godina iskustva',
         },
 
