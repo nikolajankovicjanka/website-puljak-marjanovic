@@ -1,7 +1,7 @@
 export default {
     nav: {
         home: 'Home',
-        about: 'About',
+        about: 'About us',
         team: 'Team',
         services: 'Services',
         contact: 'Contact',
@@ -38,8 +38,8 @@ export default {
                 description: 'Over 20 years of legal practice and successfully resolved cases',
             },
             clients: {
-                title: 'Client dedication',
-                description: 'An individual approach to every client and their specific needs',
+                title: 'Commitment to clients',
+                description: 'An individual approach to every client and their needs',
             },
             reliability: {
                 title: 'Reliability',
@@ -62,37 +62,37 @@ export default {
             civil: {
                 title: 'CIVIL LAW',
                 description:
-                    'Representation in litigation, enforcement and non-contentious proceedings before the competent courts in the Republic of Srpska and the Federation of Bosnia and Herzegovina, in matters from all areas of civil law.',
+                    'Representation in civil litigation, enforcement proceedings and non-contentious proceedings before competent courts in the Republic of Srpska and the Federation of Bosnia and Herzegovina, in matters from all areas of civil law.',
             },
 
             familyInheritance: {
                 title: 'FAMILY AND INHERITANCE LAW',
                 description:
-                    'Representation in divorce proceedings, regulation of marital property relations, matters concerning personal relations between parents and children, statutory support and parental rights before competent courts, guardianship authorities and local self-government bodies.\n\n- representation in probate proceedings before the competent court or acting notary, drafting of wills and other advisory services.',
+                    'Representation in divorce proceedings, regulation of marital property relations, regulation of personal relations between parents and children, statutory maintenance, as well as the exercise of parental rights before competent courts, guardianship authorities and local self-government units.\n\n- representation in inheritance proceedings before the competent court or acting notary, preparation of wills and other advisory services.',
             },
 
             labor: {
                 title: 'LABOR LAW',
                 description:
-                    'Representation in labor disputes, preparation of documentation and legal counseling in the field of employment and labor relations.',
+                    'Providing representation in labor disputes, preparation of documentation and legal consulting in the field of employment relations.',
             },
 
             property: {
                 title: 'PROPERTY RIGHTS',
                 description:
-                    'Representation in property-related disputes before competent courts in the Republic of Srpska and the Federation of Bosnia and Herzegovina, representation in real estate transactions, registration of real estate with tax authorities, land registry entries and deletion of rights, expropriation proceedings and other proceedings before administrative bodies.',
+                    'Representation in all property-law disputes before competent courts in the Republic of Srpska and the Federation of Bosnia and Herzegovina, representation in real estate transactions, registration of real estate with tax authorities, representation in the registration and deletion of rights in land registers, representation in land expropriation proceedings and other proceedings before administrative authorities.',
             },
 
             administrative: {
                 title: 'ADMINISTRATIVE LAW',
                 description:
-                    'Initiation and handling of administrative proceedings before competent administrative authorities in the Republic of Srpska and the Federation of Bosnia and Herzegovina, including legalization and construction permit procedures, inspection and tax matters, obtaining permits, resolving status issues, particularly citizenship of Bosnia and Herzegovina, public procurement procedures and other administrative matters, as well as administrative disputes.',
+                    'Initiating and conducting all administrative proceedings before competent administrative authorities in the Republic of Srpska and the Federation of Bosnia and Herzegovina, especially including proceedings related to legalization and construction permits, inspection and tax matters, obtaining permits, regulating status issues, especially citizenship of Bosnia and Herzegovina, public procurement procedures and other administrative proceedings, as well as initiating administrative disputes.',
             },
 
             other: {
                 title: 'OTHER AREAS OF PRACTICE',
                 description:
-                    'Representation in criminal and misdemeanor proceedings before competent courts in the Republic of Srpska and the Federation of Bosnia and Herzegovina.\n\n- representation in commercial disputes before competent courts in the Republic of Srpska and the Federation of Bosnia and Herzegovina;\n- registration services for companies, associations and foundations;\n- drafting of all types of contracts and provision of legal advisory services.',
+                    'Representation in criminal and misdemeanor proceedings before competent courts in the Republic of Srpska and the Federation of Bosnia and Herzegovina.\n\n- representation in commercial disputes before competent courts in the Republic of Srpska and the Federation of Bosnia and Herzegovina;\n- providing services for the registration of business companies, as well as associations of citizens and foundations;\n- drafting all types of contracts and providing advisory services.',
             },
         },
 
@@ -156,10 +156,10 @@ export default {
             submit: 'Send inquiry',
             submitting: 'Sending...',
             success: 'Your message has been sent successfully.',
-            emailSubject: 'New message from Puljak & Marjanović website',
+            emailSubject: 'New message from the Puljak & Marjanović website',
 
             errors: {
-                missingAccessKey: 'Web3Forms access key is missing in the .env file.',
+                missingAccessKey: 'The Web3Forms access key is missing in the .env file.',
                 requiredFields: 'Please fill in all required fields.',
                 submitFailed: 'An error occurred while sending the message.',
                 network: 'Network error. Please try again.',
@@ -170,7 +170,7 @@ export default {
             label: 'Our location',
             title: 'Visit us at our office',
             address: 'Atinska 19, Bijeljina 76300',
-            iframeTitle: 'Puljak & Marjanović Law Office location',
+            iframeTitle: 'Location of Puljak & Marjanović Law Office',
         },
     },
 
@@ -202,28 +202,31 @@ export default {
                 title: 'Attorney - Partner',
                 description:
                     'Snežana Puljak was born on December 12, 1984 in Zadar, Republic of Croatia, SFRY.\n' +
-                    'She completed the “Filip Višnjić” Gymnasium in Bijeljina and is a mother of three children. She graduated from the Faculty of Law\n' +
+                    'She graduated from “Filip Višnjić” Gymnasium in Bijeljina and is the mother of three children. She graduated from the Faculty of Law\n' +
                     'of the University of East Sarajevo in 2011. She began her professional legal career as a trainee attorney\n' +
-                    'with attorney Vesna Stevanović from Bijeljina and was entered in the Register of Trainee Attorneys of the Bar Association\n' +
-                    'of the Republic of Srpska from September 15, 2011 until July 6, 2014. She passed the bar examination on July 4, 2014 before the Ministry of Justice\n' +
-                    'of the Federation of Bosnia and Herzegovina. She was entered in the Register of Professional Associates of the Bar Association of the Republic of Srpska,\n' +
-                    'also with attorney Vesna Stevanović from Bijeljina, in the period from July 7, 2014 to October 17, 2022.\n' +
-                    'On April 1, 2023, she entered into employment as a professional associate for legal affairs with attorney Novka Marjanović from Bijeljina.\n' +
-                    'She passed the attorney examination before the Bar Association of the Republic of Srpska on December 26, 2022 in Banja Luka. Since\n' +
-                    'December 30, 2025, she has been practicing law independently.',
+                    'with attorney Vesna Stevanović from Bijeljina and was entered into the Register of Trainee Attorneys\n' +
+                    'of the Bar Association of the Republic of Srpska from September 15, 2011 until July 6, 2014.\n' +
+                    'She passed the bar exam on July 4, 2014 before the Ministry of Justice of the Federation of BiH.\n' +
+                    'She was also entered into the Register of Professional Associates of the Bar Association of the Republic of Srpska,\n' +
+                    'with attorney Vesna Stevanović from Bijeljina, in the period from July 7, 2014 to October 17, 2022.\n' +
+                    'On April 1, 2023, she entered into employment as a professional associate for legal affairs\n' +
+                    'with attorney Novka Marjanović from Bijeljina. She passed the attorney exam before the Bar Association\n' +
+                    'of the Republic of Srpska on December 26, 2022 in Banja Luka. Since December 30, 2025,\n' +
+                    'she has been practicing law independently.',
             },
 
             novka: {
                 name: 'Novka Marjanović',
                 title: 'Attorney - Partner',
                 description:
-                    'Novka Marjanović was born on December 8, 1990 in Bijeljina, where she completed her primary and secondary education.\n' +
-                    'She graduated from the Faculty of Law of the University of East Sarajevo on September 6, 2013, and in December of the same year\n' +
-                    'began working as a trainee attorney with attorney Vesna Stevanović from Bijeljina. She continued working there as a trainee attorney,\n' +
-                    'and later as a professional associate for legal affairs, until December 30, 2022.\n' +
-                    'She passed the bar examination on July 28, 2016 before the Federal Ministry of Justice in Sarajevo, and passed the attorney examination\n' +
-                    'before the Bar Association of the Republic of Srpska on December 25, 2020 in Banja Luka. Since February 28, 2023,\n' +
-                    'she has been practicing law independently.',
+                    'Novka Marjanović was born on December 8, 1990 in Bijeljina, where she completed her primary and secondary\n' +
+                    'education. She graduated from the Faculty of Law of the University of East Sarajevo on September 6, 2013.\n' +
+                    'In December of the same year, she began working as a trainee attorney with attorney Vesna Stevanović\n' +
+                    'from Bijeljina, where she performed the duties of trainee attorney and later professional associate\n' +
+                    'for legal affairs until December 30, 2022.\n' +
+                    'She passed the bar exam on July 28, 2016 before the Federal Ministry of Justice in Sarajevo,\n' +
+                    'and passed the attorney exam before the Bar Association of the Republic of Srpska\n' +
+                    'on December 25, 2020 in Banja Luka. Since February 28, 2023, she has been practicing law independently.',
             },
 
             aleksandra: {
@@ -231,10 +234,11 @@ export default {
                 title: 'Attorney - Associate',
                 description:
                     'Aleksandra Lugonja was born on November 21, 1989 in Sarajevo. She completed her primary and secondary education\n' +
-                    'in Bijeljina and continued her studies at the Faculty of Law of the University of East Sarajevo, where she graduated on February 28, 2013.\n' +
-                    'From March 25, 2013 to December 31, 2015, she worked as a trainee attorney and, after passing the bar examination,\n' +
-                    'continued working as a professional associate. Through many years of work, she gained experience in all areas of law.\n' +
-                    'Since March 14, 2023, she has been employed with attorney Novka Marjanović as a professional associate.',
+                    'in Bijeljina and continued her studies at the Faculty of Law of the University of East Sarajevo,\n' +
+                    'where she graduated on February 28, 2013. From March 25, 2013 until December 31, 2015,\n' +
+                    'she worked as a trainee attorney, and after passing the bar exam, continued working as a professional associate.\n' +
+                    'Through many years of work, she gained experience in all areas of law. Since March 14, 2023,\n' +
+                    'she has been employed with attorney Novka Marjanović as a professional associate.',
             },
         },
     },
@@ -259,10 +263,12 @@ export default {
         },
 
         contact: {
-            phoneOne: '+387 XX XXX XXX',
-            phoneTwo: '+387 XX XXX XXX',
+            phoneOne: '+387 65 449 209',
+            phoneTwo: '+387 65 474 284',
+            phoneThree: '+387 65 918 717',
             emailOne: 'advokatnovkamarjanovic{\'@\'}gmail.com',
             emailTwo: 'adv.aleksandralugonja{\'@\'}gmail.com',
+            emailThree: 'snezanapuljak.adv{\'@\'}gmail.com',
         },
 
         rights: 'All rights reserved.',

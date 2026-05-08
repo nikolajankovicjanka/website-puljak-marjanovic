@@ -21,12 +21,12 @@ const contactInfo: ContactInfoItem[] = [
   {
     icon: Phone,
     titleKey: 'contact.info.phone.title',
-    detailKeys: ['contact.info.phone.lineOne', 'contact.info.phone.lineTwo'],
+    detailKeys: ['contact.info.phone.lineOne', 'contact.info.phone.lineTwo', 'contact.info.phone.lineThree'],
   },
   {
     icon: Mail,
     titleKey: 'contact.info.email.title',
-    detailKeys: ['contact.info.email.lineOne', 'contact.info.email.lineTwo'],
+    detailKeys: ['contact.info.email.lineOne', 'contact.info.email.lineTwo', 'contact.info.email.lineThree'],
   },
   {
     icon: Clock,

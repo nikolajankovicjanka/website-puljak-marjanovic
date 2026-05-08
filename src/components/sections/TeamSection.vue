@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { Mail, Linkedin, X } from 'lucide-vue-next'
+import { Mail, X } from 'lucide-vue-next'
 
 type TeamMember = {
   id: string
@@ -9,11 +9,13 @@ type TeamMember = {
   titleKey: string
   image: string
   descriptionKey: string
+  email: string
 }
 
 const { t } = useI18n()
 
 const BIO_PREVIEW_LIMIT = 200
+const AT = String.fromCharCode(64)
 
 const selectedMember = ref<TeamMember | null>(null)
 
@@ -44,6 +46,7 @@ const team: TeamMember[] = [
     titleKey: 'team.members.snezana.title',
     image: '/advokati/snezana-puljak.png',
     descriptionKey: 'team.members.snezana.description',
+    email: ['snezanapuljak.adv', 'gmail.com'].join(AT),
   },
   {
     id: 'novka-marjanovic',
@@ -51,6 +54,7 @@ const team: TeamMember[] = [
     titleKey: 'team.members.novka.title',
     image: '/advokati/novka-marjanovic.png',
     descriptionKey: 'team.members.novka.description',
+    email: ['advokatnovkamarjanovic', 'gmail.com'].join(AT),
   },
   {
     id: 'aleksandra-lugonja',
@@ -58,6 +62,7 @@ const team: TeamMember[] = [
     titleKey: 'team.members.aleksandra.title',
     image: '/advokati/aleksandra-lugonja.png',
     descriptionKey: 'team.members.aleksandra.description',
+    email: ['adv.alensadralugonja', 'gmail.com'].join(AT),
   },
 ]
 </script>
@@ -97,25 +102,17 @@ const team: TeamMember[] = [
 
             <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
 
-            <!-- Social icons overlay -->
+            <!-- Email icon overlay -->
             <div
                 class="absolute bottom-4 left-4 right-4 flex gap-2 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
             >
-              <button
-                  type="button"
+              <a
+                  :href="`mailto:${member.email}`"
                   class="rounded-lg bg-white/90 p-2 transition-colors hover:bg-white"
-                  :aria-label="t('team.social.email')"
+                  :aria-label="`${t('team.social.email')} - ${t(member.nameKey)}`"
               >
                 <Mail class="h-5 w-5 text-[#556B2F]" />
-              </button>
-
-              <button
-                  type="button"
-                  class="rounded-lg bg-white/90 p-2 transition-colors hover:bg-white"
-                  :aria-label="t('team.social.linkedin')"
-              >
-                <Linkedin class="h-5 w-5 text-[#556B2F]" />
-              </button>
+              </a>
             </div>
           </div>
 
@@ -136,7 +133,7 @@ const team: TeamMember[] = [
             <button
                 type="button"
                 class="mt-auto inline-flex w-fit items-center rounded-full border border-[#556B2F]/30 px-5 py-2 text-sm font-semibold text-[#556B2F] transition-all duration-300 hover:bg-[#556B2F] hover:text-white"
-                @click="openMemberModal(member)"
+                v-on:click="openMemberModal(member)"
             >
               {{ t('team.detailsButton') }}
             </button>
@@ -176,7 +173,7 @@ const team: TeamMember[] = [
         <div
             v-if="isModalOpen && selectedMember"
             class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4 py-6 backdrop-blur-sm"
-            @click.self="closeMemberModal"
+            v-on:click.self="closeMemberModal"
         >
           <Transition
               appear
@@ -194,7 +191,7 @@ const team: TeamMember[] = [
                   type="button"
                   class="absolute right-4 top-4 z-10 rounded-full bg-white/90 p-2 text-gray-700 shadow-md transition hover:bg-[#556B2F] hover:text-white"
                   :aria-label="t('team.modal.close')"
-                  @click="closeMemberModal"
+                  v-on:click="closeMemberModal"
               >
                 <X class="h-5 w-5" />
               </button>

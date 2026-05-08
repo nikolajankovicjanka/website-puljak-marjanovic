@@ -39,7 +39,7 @@ export default {
             },
             clients: {
                 title: 'Посвећеност клијентима',
-                description: 'Индивидуални приступ сваком клијенту и његовим потребама',
+                description: 'Индивидуални приступ сваком клијенту и њиховим потребама',
             },
             reliability: {
                 title: 'Поузданост',
@@ -122,7 +122,7 @@ export default {
                 lineTwo: '+387 XX XXX XXX',
             },
             email: {
-                title: 'Емаил',
+                title: 'Имејл',
                 lineOne: 'advokatnovkamarjanovic{\'@\'}gmail.com',
                 lineTwo: 'adv.aleksandralugonja{\'@\'}gmail.com',
             },
@@ -143,7 +143,7 @@ export default {
         side: {
             addressLabel: 'Адреса',
             address: 'Атинска 19, Бијељина 76300',
-            emailLabel: 'Емаил',
+            emailLabel: 'Имејл',
             email: 'advokatnovkamarjanovic{\'@\'}gmail.com',
             phoneLabel: 'Телефон',
             phone: '+387 XX XXX XXX',
@@ -151,7 +151,7 @@ export default {
 
         form: {
             namePlaceholder: 'Име и презиме',
-            emailPlaceholder: 'Емаил',
+            emailPlaceholder: 'Имејл',
             messagePlaceholder: 'Ваша порука',
             submit: 'Пошаљи упит',
             submitting: 'Слање...',
@@ -182,7 +182,7 @@ export default {
         detailsButton: 'Види детаље',
 
         social: {
-            email: 'Пошаљи емаил',
+            email: 'Пошаљи имејл',
             linkedin: 'LinkedIn профил',
         },
 
@@ -264,10 +264,12 @@ export default {
         },
 
         contact: {
-            phoneOne: '+387 XX XXX XXX',
-            phoneTwo: '+387 XX XXX XXX',
+            phoneOne: '+387 65 449 209',
+            phoneTwo: '+387 65 474 284',
+            phoneThree: '+387 65 918 717',
             emailOne: 'advokatnovkamarjanovic{\'@\'}gmail.com',
             emailTwo: 'adv.aleksandralugonja{\'@\'}gmail.com',
+            emailThree: 'snezanapuljak.adv{\'@\'}gmail.com',
         },
 
         rights: 'Сва права задржана.',

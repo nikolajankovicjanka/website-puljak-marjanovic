@@ -264,10 +264,12 @@ export default {
         },
 
         contact: {
-            phoneOne: '+387 XX XXX XXX',
-            phoneTwo: '+387 XX XXX XXX',
+            phoneOne: '+387 65 449 209',
+            phoneTwo: '+387 65 474 284',
+            phoneThree: '+387 65 918 717',
             emailOne: 'advokatnovkamarjanovic{\'@\'}gmail.com',
             emailTwo: 'adv.aleksandralugonja{\'@\'}gmail.com',
+            emailThree: 'snezanapuljak.adv{\'@\'}gmail.com',
         },
 
         rights: 'Sva prava zadržana.',

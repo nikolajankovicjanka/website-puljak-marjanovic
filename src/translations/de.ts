@@ -68,31 +68,31 @@ export default {
             familyInheritance: {
                 title: 'FAMILIEN- UND ERBRECHT',
                 description:
-                    'Vertretung in Scheidungsverfahren, bei der Regelung ehelicher Vermögensverhältnisse, der Gestaltung persönlicher Beziehungen zwischen Eltern und Kindern, gesetzlichem Unterhalt sowie der Ausübung elterlicher Rechte vor zuständigen Gerichten, Vormundschaftsbehörden und lokalen Selbstverwaltungsorganen.\n\n- Vertretung in Nachlassverfahren vor dem zuständigen Gericht oder Notar, Erstellung von Testamenten und weitere beratende Leistungen.',
+                    'Vertretung in Scheidungsverfahren, bei der Regelung ehelicher Vermögensverhältnisse, der Gestaltung persönlicher Beziehungen zwischen Eltern und Kindern, gesetzlichem Unterhalt sowie der Ausübung elterlicher Rechte vor zuständigen Gerichten, Vormundschaftsbehörden und lokalen Selbstverwaltungsorganen.\n\n- Vertretung in Nachlassverfahren vor dem zuständigen Gericht oder dem beauftragten Notar, Erstellung von Testamenten und weitere Beratungsleistungen.',
             },
 
             labor: {
                 title: 'ARBEITSRECHT',
                 description:
-                    'Vertretung in arbeitsrechtlichen Streitigkeiten, Erstellung von Unterlagen und Rechtsberatung im Bereich arbeitsrechtlicher Beziehungen.',
+                    'Vertretung in arbeitsrechtlichen Streitigkeiten, Erstellung von Dokumentation und rechtliche Beratung im Bereich der Arbeitsverhältnisse.',
             },
 
             property: {
-                title: 'EIGENTUMSRECHTE',
+                title: 'VERMÖGENS- UND EIGENTUMSRECHTE',
                 description:
-                    'Vertretung in allen eigentumsrechtlichen Streitigkeiten vor den zuständigen Gerichten in der Republik Srpska und der Föderation Bosnien und Herzegowina, Vertretung bei Immobilientransaktionen, Registrierung von Immobilien bei Steuerbehörden, Eintragung und Löschung von Rechten in Grundbüchern, Vertretung in Enteignungsverfahren und anderen Verfahren vor Verwaltungsbehörden.',
+                    'Vertretung in allen vermögens- und eigentumsrechtlichen Streitigkeiten vor den zuständigen Gerichten in der Republik Srpska und der Föderation Bosnien und Herzegowina, Vertretung bei Immobilientransaktionen, Registrierung von Immobilien bei Steuerbehörden, Vertretung bei Eintragung und Löschung von Rechten in Grundbüchern, Vertretung in Enteignungsverfahren und anderen Verfahren vor Verwaltungsbehörden.',
             },
 
             administrative: {
                 title: 'VERWALTUNGSRECHT',
                 description:
-                    'Einleitung und Führung von Verwaltungsverfahren vor zuständigen Verwaltungsbehörden in der Republik Srpska und der Föderation Bosnien und Herzegowina, insbesondere Verfahren im Zusammenhang mit Legalisierungen und Baugenehmigungen, Inspektions- und Steuerangelegenheiten, Einholung von Genehmigungen, Regelung von Statusfragen, insbesondere der Staatsangehörigkeit von Bosnien und Herzegowina, öffentlichen Vergabeverfahren und anderen Verwaltungsverfahren sowie Verwaltungsstreitigkeiten.',
+                    'Einleitung und Führung sämtlicher Verwaltungsverfahren vor zuständigen Verwaltungsbehörden in der Republik Srpska und der Föderation Bosnien und Herzegowina, insbesondere Verfahren im Zusammenhang mit Legalisierungen und Baugenehmigungen, Inspektions- und Steuerangelegenheiten, Einholung von Genehmigungen, Regelung von Statusfragen, insbesondere der Staatsangehörigkeit von Bosnien und Herzegowina, Verfahren der öffentlichen Beschaffung und sonstige Verwaltungsverfahren sowie Einleitung von Verwaltungsstreitigkeiten.',
             },
 
             other: {
                 title: 'WEITERE TÄTIGKEITSBEREICHE',
                 description:
-                    'Vertretung in Straf- und Ordnungswidrigkeitsverfahren vor zuständigen Gerichten in der Republik Srpska und der Föderation Bosnien und Herzegowina.\n\n- Vertretung in Wirtschaftsstreitigkeiten vor zuständigen Gerichten in der Republik Srpska und der Föderation Bosnien und Herzegowina;\n- Registrierung von Gesellschaften sowie Vereinen und Stiftungen;\n- Erstellung aller Arten von Verträgen und Erbringung von Beratungsleistungen.',
+                    'Vertretung in Straf- und Ordnungswidrigkeitsverfahren vor den zuständigen Gerichten in der Republik Srpska und der Föderation Bosnien und Herzegowina.\n\n- Vertretung in wirtschaftsrechtlichen Streitigkeiten vor den zuständigen Gerichten in der Republik Srpska und der Föderation Bosnien und Herzegowina;\n- Dienstleistungen zur Registrierung von Handelsgesellschaften sowie Bürgervereinen und Stiftungen;\n- Erstellung aller Arten von Verträgen und Erbringung von Beratungsleistungen.',
             },
         },
 
@@ -202,38 +202,42 @@ export default {
                 title: 'Rechtsanwältin - Partnerin',
                 description:
                     'Snežana Puljak wurde am 12. Dezember 1984 in Zadar, Republik Kroatien, SFRJ, geboren.\n' +
-                    'Sie absolvierte das Gymnasium „Filip Višnjić“ in Bijeljina und ist Mutter von drei Kindern. Im Jahr 2011 schloss sie ihr Studium an der Juristischen Fakultät\n' +
-                    'der Universität Ost-Sarajevo ab. Ihre berufliche Laufbahn im juristischen Bereich begann sie als Rechtsanwaltsanwärterin\n' +
-                    'bei Rechtsanwältin Vesna Stevanović aus Bijeljina und wurde ab dem 15.09.2011 bis zum 06.07.2014 in das Verzeichnis der Rechtsanwaltsanwärter\n' +
-                    'der Rechtsanwaltskammer der Republik Srpska eingetragen. Die juristische Staatsprüfung legte sie am 04.07.2014 vor dem Justizministerium\n' +
-                    'der Föderation Bosnien und Herzegowina ab. Sie wurde in das Verzeichnis der fachlichen Mitarbeiter der Rechtsanwaltskammer der Republik Srpska eingetragen,\n' +
+                    'Sie absolvierte das Gymnasium „Filip Višnjić“ in Bijeljina und ist Mutter von drei Kindern. Sie schloss ihr Studium an der Juristischen Fakultät\n' +
+                    'der Universität Ost-Sarajevo im Jahr 2011 ab. Ihre berufliche Tätigkeit im Rechtsbereich begann sie als Rechtsanwaltsanwärterin\n' +
+                    'bei Rechtsanwältin Vesna Stevanović aus Bijeljina und wurde in das Verzeichnis der Rechtsanwaltsanwärter\n' +
+                    'der Rechtsanwaltskammer der Republik Srpska ab dem 15.09.2011 bis zum 06.07.2014 eingetragen.\n' +
+                    'Die juristische Staatsprüfung legte sie am 04.07.2014 vor dem Justizministerium der Föderation BiH ab.\n' +
+                    'Sie wurde außerdem in das Verzeichnis der fachlichen Mitarbeiter der Rechtsanwaltskammer der Republik Srpska eingetragen,\n' +
                     'ebenfalls bei Rechtsanwältin Vesna Stevanović aus Bijeljina, im Zeitraum vom 07.07.2014 bis zum 17.10.2022.\n' +
-                    'Am 01.04.2023 nahm sie eine Tätigkeit als fachliche Mitarbeiterin für Rechtsangelegenheiten bei Rechtsanwältin Novka Marjanović aus Bijeljina auf.\n' +
-                    'Die Anwaltsprüfung vor der Rechtsanwaltskammer der Republik Srpska legte sie am 26.12.2022 in Banja Luka ab. Seit dem\n' +
-                    '30.12.2025 ist sie selbstständig als Rechtsanwältin tätig.',
+                    'Am 01.04.2023 nahm sie eine Beschäftigung als fachliche Mitarbeiterin für Rechtsangelegenheiten\n' +
+                    'bei Rechtsanwältin Novka Marjanović aus Bijeljina auf. Die Anwaltsprüfung vor der Rechtsanwaltskammer\n' +
+                    'der Republik Srpska bestand sie am 26.12.2022 in Banja Luka. Seit dem 30.12.2025\n' +
+                    'ist sie selbstständig als Rechtsanwältin tätig.',
             },
 
             novka: {
                 name: 'Novka Marjanović',
                 title: 'Rechtsanwältin - Partnerin',
                 description:
-                    'Novka Marjanović wurde am 08.12.1990 in Bijeljina geboren, wo sie ihre Grund- und Mittelschulausbildung absolvierte.\n' +
-                    'An der Juristischen Fakultät der Universität Ost-Sarajevo schloss sie ihr Studium am 06.09.2013 ab. Im Dezember desselben Jahres\n' +
-                    'begann sie als Rechtsanwaltsanwärterin bei Rechtsanwältin Vesna Stevanović aus Bijeljina zu arbeiten, wo sie zunächst als Rechtsanwaltsanwärterin\n' +
-                    'und später als fachliche Mitarbeiterin für Rechtsangelegenheiten bis zum 30.12.2022 tätig war.\n' +
-                    'Die juristische Staatsprüfung legte sie am 28.07.2016 vor dem Föderalen Justizministerium in Sarajevo ab, und die Anwaltsprüfung\n' +
-                    'vor der Rechtsanwaltskammer der Republik Srpska legte sie am 25.12.2020 in Banja Luka ab. Seit dem 28.02.2023\n' +
-                    'ist sie selbstständig als Rechtsanwältin tätig.',
+                    'Novka Marjanović wurde am 8.12.1990 in Bijeljina geboren, wo sie ihre Grund- und Sekundarschulausbildung\n' +
+                    'abschloss. An der Juristischen Fakultät der Universität Ost-Sarajevo graduierte sie am 6.9.2013.\n' +
+                    'Im Dezember desselben Jahres begann sie als Rechtsanwaltsanwärterin bei Rechtsanwältin Vesna Stevanović\n' +
+                    'aus Bijeljina zu arbeiten, bei der sie die Aufgaben einer Rechtsanwaltsanwärterin und später einer fachlichen Mitarbeiterin\n' +
+                    'für Rechtsangelegenheiten bis zum 30.12.2022 ausübte.\n' +
+                    'Die juristische Staatsprüfung bestand sie am 28.7.2016 vor dem Föderalen Justizministerium in Sarajevo,\n' +
+                    'und die Anwaltsprüfung vor der Rechtsanwaltskammer der Republik Srpska bestand sie\n' +
+                    'am 25.12.2020 in Banja Luka. Seit dem 28.2.2023 ist sie selbstständig als Rechtsanwältin tätig.',
             },
 
             aleksandra: {
                 name: 'Aleksandra Lugonja',
                 title: 'Rechtsanwältin - Mitarbeiterin',
                 description:
-                    'Aleksandra Lugonja wurde am 21.11.1989 in Sarajevo geboren. Ihre Grund- und Mittelschulausbildung absolvierte sie\n' +
-                    'in Bijeljina und setzte ihre Ausbildung an der Juristischen Fakultät der Universität Ost-Sarajevo fort, wo sie am 28.02.2013 ihr Studium abschloss.\n' +
-                    'Im Zeitraum vom 25.03.2013 bis zum 31.12.2015 war sie als Rechtsanwaltsanwärterin tätig und arbeitete nach bestandener juristischer Staatsprüfung\n' +
-                    'weiter als fachliche Mitarbeiterin. Durch ihre langjährige Tätigkeit sammelte sie Erfahrung in allen Rechtsgebieten.\n' +
+                    'Aleksandra Lugonja wurde am 21.11.1989 in Sarajevo geboren. Ihre Grund- und Sekundarschulausbildung\n' +
+                    'absolvierte sie in Bijeljina und setzte ihre Ausbildung an der Juristischen Fakultät der Universität Ost-Sarajevo fort,\n' +
+                    'wo sie am 28.02.2013 graduierte. Im Zeitraum vom 25.03.2013 bis zum 31.12.2015\n' +
+                    'arbeitete sie als Rechtsanwaltsanwärterin und setzte nach Bestehen der juristischen Staatsprüfung ihre Tätigkeit\n' +
+                    'als fachliche Mitarbeiterin fort. Durch ihre langjährige Arbeit sammelte sie Erfahrung in allen Rechtsbereichen.\n' +
                     'Seit dem 14.03.2023 ist sie bei Rechtsanwältin Novka Marjanović als fachliche Mitarbeiterin beschäftigt.',
             },
         },
@@ -259,10 +263,12 @@ export default {
         },
 
         contact: {
-            phoneOne: '+387 XX XXX XXX',
-            phoneTwo: '+387 XX XXX XXX',
+            phoneOne: '+387 65 449 209',
+            phoneTwo: '+387 65 474 284',
+            phoneThree: '+387 65 918 717',
             emailOne: 'advokatnovkamarjanovic{\'@\'}gmail.com',
             emailTwo: 'adv.aleksandralugonja{\'@\'}gmail.com',
+            emailThree: 'snezanapuljak.adv{\'@\'}gmail.com',
         },
 
         rights: 'Alle Rechte vorbehalten.',
