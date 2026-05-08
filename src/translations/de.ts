@@ -118,13 +118,15 @@ export default {
             },
             phone: {
                 title: 'Telefon',
-                lineOne: '+387 XX XXX XXX',
-                lineTwo: '+387 XX XXX XXX',
+                lineOne: '+387 65 449 209',
+                lineTwo: '+387 65 474 284',
+                lineThree: '+387 65 918 717',
             },
             email: {
-                title: 'E-Mail',
+                title: 'Email',
                 lineOne: 'advokatnovkamarjanovic{\'@\'}gmail.com',
                 lineTwo: 'adv.aleksandralugonja{\'@\'}gmail.com',
+                lineThree: 'snezanapuljak.adv{\'@\'}gmail.com',
             },
             workingHours: {
                 title: 'Öffnungszeiten',
@@ -146,7 +148,7 @@ export default {
             emailLabel: 'E-Mail',
             email: 'advokatnovkamarjanovic{\'@\'}gmail.com',
             phoneLabel: 'Telefon',
-            phone: '+387 XX XXX XXX',
+            phone: '+387 65 449 209',
         },
 
         form: {
