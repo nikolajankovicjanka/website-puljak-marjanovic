@@ -35,7 +35,7 @@ export default {
         features: {
             experience: {
                 title: 'Langjährige Erfahrung',
-                description: 'Über 20 Jahre Rechtspraxis und erfolgreich gelöste Fälle',
+                description: 'Über 15 Jahre Rechtspraxis und erfolgreich gelöste Fälle',
             },
             clients: {
                 title: 'Engagement für Mandanten',

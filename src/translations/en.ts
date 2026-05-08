@@ -35,7 +35,7 @@ export default {
         features: {
             experience: {
                 title: 'Extensive experience',
-                description: 'Over 20 years of legal practice and successfully resolved cases',
+                description: 'Over 15 years of legal practice and successfully resolved cases',
             },
             clients: {
                 title: 'Commitment to clients',
@@ -148,7 +148,7 @@ export default {
             emailLabel: 'Email',
             email: 'advokatnovkamarjanovic{\'@\'}gmail.com',
             phoneLabel: 'Phone',
-            phone: '+387 XX XXX XXX',
+            phone: '+387 65 449 209',
         },
 
         form: {

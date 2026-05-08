@@ -35,7 +35,7 @@ export default {
         features: {
             experience: {
                 title: 'Dugogodišnje iskustvo',
-                description: 'Preko 20 godina pravne prakse i uspješno riješenih slučajeva',
+                description: 'Preko 15 godina pravne prakse i uspješno riješenih slučajeva',
             },
             clients: {
                 title: 'Posvećenost klijentima',
@@ -62,7 +62,7 @@ export default {
             civil: {
                 title: 'GRAĐANSKO PRAVO',
                 description:
-                    'Zastupanje u parničnim postupcima, izvršnim postupcima i vanparničnim postupcima pred nadležnim sudovima u Republici Srpskoj i Federaciji Bosne i Hercegovine, a u postupcima iz svih oblasti građanskog, odnosno civilnog prava;',
+                    'Zastupanje u parničnim postupcima, izvršnim postupcima i vanparničnim postupcima pred nadležnim sudovima u Republici Srpskoj i Federaciji Bosne i Hercegovine, a u postupcima iz svih oblasti građanskog, odnosno civilnog prava',
             },
 
             familyInheritance: {
@@ -80,7 +80,7 @@ export default {
             property: {
                 title: 'IMOVINSKA PRAVA',
                 description:
-                    'Zastupanje u svim imovinsko-pravnim sporovima pred nadležnim sudovima u Republici Srpskoj i Federaciji Bosne i Hercegovine, zastupanje prilikom prometa nekretnina, registracije nekretnina kod poreskih organa, zastupanja prilikom uknjižbe i brisanja prava u zemljišnim knjigama, zastupanje u postupcima eksproprijacije zemljišta i drugim postupcima pred organima uprave;',
+                    'Zastupanje u svim imovinsko-pravnim sporovima pred nadležnim sudovima u Republici Srpskoj i Federaciji Bosne i Hercegovine, zastupanje prilikom prometa nekretnina, registracije nekretnina kod poreskih organa, zastupanja prilikom uknjižbe i brisanja prava u zemljišnim knjigama, zastupanje u postupcima eksproprijacije zemljišta i drugim postupcima pred organima uprave.',
             },
 
             administrative: {
@@ -148,7 +148,7 @@ export default {
             emailLabel: 'Email',
             email: 'advokatnovkamarjanovic{\'@\'}gmail.com',
             phoneLabel: 'Telefon',
-            phone: '+387 XX XXX XXX',
+            phone: '+387 65 449 209',
         },
 
         form: {
